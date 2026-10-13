@@ -1,0 +1,35 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Local databases and SQLite WAL files
+*.db
+*.db-wal
+*.db-shm
+evidence.db
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Compiled executables and objects
+*.exe
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+
+# Temporary test/runner artifacts
+si_sub_*
+dist/
+release/
+scratch/
+.system_generated/
+
+# Environment files with credentials
+.env

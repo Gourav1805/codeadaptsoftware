@@ -1,0 +1,110 @@
+===========================================================
+  SI PILOT  -  HOW TO RUN THIS
+===========================================================
+
+You need a WINDOWS computer. This will not run on a Mac.
+
+The first time takes about 15 minutes, mostly waiting for a
+download. After that, starting it takes 5 seconds.
+
+
+-----------------------------------------------------------
+BEFORE YOU START
+-----------------------------------------------------------
+
+Unzip this folder somewhere normal, like your Desktop.
+
+Do NOT run it from inside the .zip file. Windows lets you
+look inside a zip without unzipping, and things will fail in
+confusing ways if you do that.
+
+
+-----------------------------------------------------------
+STEP 1  -  double-click:   1-SETUP.bat
+-----------------------------------------------------------
+
+A black window opens and checks four things.
+
+If Windows shows a blue "Windows protected your PC" box:
+  click "More info", then "Run anyway".
+  (This appears for any file downloaded from the internet.)
+
+Read the last few lines of the black window.
+
+  - If it says ALL GOOD in green      -> go to STEP 2.
+  - If it says SETUP INCOMPLETE in red -> it tells you exactly
+    what to do next. Do that, then double-click 1-SETUP.bat
+    again. Repeat until it says ALL GOOD.
+
+The most common thing it will ask for is the C++ compiler.
+If so, double-click INSTALL-COMPILER.bat, wait for it to
+finish (it downloads about 900 MB), then run 1-SETUP.bat
+again.
+
+
+-----------------------------------------------------------
+STEP 2  -  double-click:   2-START.bat
+-----------------------------------------------------------
+
+A black window opens, then your web browser opens by itself
+after about 4 seconds.
+
+If Windows asks about the firewall, click "Allow access".
+
+If the browser does not open on its own, open it yourself and
+type this in the address bar:
+
+      localhost:8077
+
+KEEP THE BLACK WINDOW OPEN while you use the site. Closing it
+stops the program. That is also how you shut it down when you
+are finished.
+
+
+-----------------------------------------------------------
+USING IT
+-----------------------------------------------------------
+
+  1. Pick a problem from the left column.
+  2. Write your C++ in the box on the right.
+     Only write the one function. Do NOT write main().
+  3. Click "Run tests".
+  4. Results appear underneath, one row per test.
+
+The first submission after starting is slower than the rest.
+That is normal - it is warming up.
+
+What the letters mean:
+
+  P  = correct
+  F  = your code ran, but gave the wrong answer
+  R  = your code crashed, or never finished
+
+A "compile error" is shown separately and is NOT counted as
+failed tests. It just means the code could not be built.
+
+
+-----------------------------------------------------------
+IF SOMETHING GOES WRONG
+-----------------------------------------------------------
+
+Take a photo or screenshot of the whole black window and send
+it back. The error messages are written to be useful - they
+say what is wrong and what to do about it.
+
+
+-----------------------------------------------------------
+FOR A DEVELOPER, IF YOU HAVE ONE
+-----------------------------------------------------------
+
+  README.md    - what this is, how it is built, how to run it
+  FINDINGS.md  - what was tested and what was found
+
+To check the whole system on this machine:
+
+      python tests/run_regression.py
+
+It should end with "INFRASTRUCTURE: all checks passed".
+It also reports 3 known differences from the original design
+documents. Those are recorded findings, not faults - they are
+explained in FINDINGS.md.
